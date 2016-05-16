@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="infoWindow">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4kQ-C5-rHF">
+                    <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eN7-41-C4c">
+                    <rect key="frame" x="6" y="2" width="55" height="46"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="55" id="kA4-Uj-Wuu"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZP-cQ-GoE">
+                    <rect key="frame" x="75" y="4" width="217" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="JhK-Y0-LhX"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="textColor" red="0.10216801588001091" green="0.30067744877609431" blue="0.70795849116161613" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vBr-2R-J9n">
+                    <rect key="frame" x="75" y="29" width="217" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.42068710363699119" green="0.6898969851707506" blue="0.74717881944444442" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="0.98943544171253039" blue="0.80486671226249784" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="cZP-cQ-GoE" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailingMargin" id="2Mc-65-lF1"/>
+                <constraint firstAttribute="bottom" secondItem="vBr-2R-J9n" secondAttribute="bottom" id="3Bv-nI-ARb"/>
+                <constraint firstItem="vBr-2R-J9n" firstAttribute="trailing" secondItem="cZP-cQ-GoE" secondAttribute="trailing" id="GI2-Lz-u4R"/>
+                <constraint firstItem="cZP-cQ-GoE" firstAttribute="leading" secondItem="vBr-2R-J9n" secondAttribute="leading" id="ZlW-bc-L2W"/>
+                <constraint firstItem="eN7-41-C4c" firstAttribute="top" secondItem="cZP-cQ-GoE" secondAttribute="top" constant="-2" id="mDP-B7-jCu"/>
+                <constraint firstItem="vBr-2R-J9n" firstAttribute="top" secondItem="cZP-cQ-GoE" secondAttribute="bottom" constant="4" id="n5k-wX-jAp"/>
+                <constraint firstItem="cZP-cQ-GoE" firstAttribute="leading" secondItem="eN7-41-C4c" secondAttribute="trailing" constant="14" id="syS-gp-C0p"/>
+                <constraint firstItem="eN7-41-C4c" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" constant="-2" id="tc1-wK-27H"/>
+                <constraint firstAttribute="bottom" secondItem="eN7-41-C4c" secondAttribute="bottom" constant="2" id="zks-98-33T"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="icon" destination="eN7-41-C4c" id="ehH-mp-NdU"/>
+                <outlet property="subtitle" destination="vBr-2R-J9n" id="47i-co-XDr"/>
+                <outlet property="title" destination="cZP-cQ-GoE" id="j2V-6s-8gc"/>
+            </connections>
+        </view>
+    </objects>
+</document>
